@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misFunciones.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>CLIENTES</title>
+    </head>
+
+    <body>
+        <canvas> </canvas>
+        <div id="logo"> 
+            <h1>CAR <span>CENTER</span></h1>
+        </div> 
+        <div class="contact-wrapper" >
+            <div class="contact-form">
+                <h3>Clientes</h3>
+                <form  id="formCliente" name="formCliente" action="javascript:mensaje('formCliente')">
+                    <p>
+                        <label for="primerNombre">Primer Nombre</label>
+                        <input type="text" name="primerNombre" id="primerNombre" required>
+                    </p>
+                    <p>
+                        <label for="segundoNombre">Segundo Nombre</label>
+                        <input type="text" name="segundoNombre" id="segundoNombre" required>
+                    </p>
+                    <p>
+                        <label for="primerApellido">Primer Apellido</label>
+                        <input type="text" name="primerApellido" id="primerApellido" required>
+                    </p>
+                    <p>
+                        <label for="segundoApellido">Segundo Apellido</label>
+                        <input type="text" name="segundoApellido" id="segundoApellido" required>
+                    </p>
+                    <p>
+                        <label for="documentoTipo">Tipo Documento</label>
+                        <input type="text" name="documentoTipo" id="documentoTipo" required>
+                    </p>
+                    <p>
+                        <label for="documentoNumero">Numero Documento</label>
+                        <input type="number" name="documentoNumero" id="documentoNumero" required>
+                    </p>
+                    <p>
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" name="telefono" id="telefono" required>
+                    </p>
+                    <p>
+                        <label for="direccion">Direccion</label>
+                        <input type="text" name="direccion" id="direccion" required>
+                    </p>
+                    <p>
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" required>
+                    </p>
+                    <input type="submit" value="Enviar">
+                </form>
+                <div class="stark-logiform" >
+                    <button onclick="traerInformacionClient()"  type="submit" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search" ></span>Consultar</button>
+                     <button onclick="guardarInformacionClient()" type="submit" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-saved"></span>Agregar</button>                 
+                </div>
+            </div>
+            <div class="contact-info"> 
+                <table>
+                    <thead>
+                        <th>Primer Nombre</th>
+                        <th>Segundo Nombre</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Tipo de Documento</th>
+                        <th>Numero de Documento</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Correo</th>
+                        <th>Correo</th>
+                        <th>Correo</th>
+                    </thead>
+                    <tbody id="resultadoClient"></tbody>
+                </table>  
+            </div>
+            </div>
+        </section>
+    </body>
+</html>
